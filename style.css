@@ -1,0 +1,296 @@
+@keyframes anima{
+    0%{background-color: blue;}
+  100%{background: transparent;}
+  
+    
+}
+@keyframes pulsar {
+    0% {
+      background-size: 100% 100%;
+    }
+    50% {
+      background-size: 300% 300%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+    
+  @keyframes cubeRotateDiagonal {
+    0% {
+      transform:  rotateX(-0deg) rotateY(-360deg); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_frente {
+    0% {
+      transform: translateZ(55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+      transform: translateZ(150px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_tras {
+    0% {
+      transform: translateZ(-55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+      transform: translateZ(-150px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_baixo {
+    0% {
+        transform: rotatex(90deg) translateZ(55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+        transform: rotatex(90deg) translateZ(120px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_cima {
+    0% {
+      transform: rotatex(-90deg) translateZ(55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+      transform: rotatex(-90deg) translateZ(120px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_dir {
+    0% {
+        transform: rotateY(-90deg) translateZ(55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+        transform: rotateY(-90deg) translateZ(120px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+@keyframes zoom_esq {
+    0% {
+        transform: rotateY(90deg) translateZ(55px); /* Incline 45 graus em X e 45 graus em Y */
+    }
+    33% {
+        transform: rotateY(90deg) translateZ(120px); /* Mantenha a inclinação constante durante a animação */
+    }   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+      
+     
+}
+
+.topo{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+.kube{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 400px;
+    
+       
+    
+}
+
+
+.logo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: cubeRotateDiagonal 10s linear infinite;
+    border-radius: 100%;
+    
+    
+    
+}
+.logo >div{
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0.8;
+}
+.esq{
+        transform: rotateY(90deg) translateZ(55px);
+        animation: zoom_esq 10s linear infinite;    
+}
+.dir{
+    background-color: blanchedalmond;
+    transform: rotateY(-90deg) translateZ(55px); 
+    animation: zoom_dir 10s linear infinite;   
+}
+.cima{
+     transform:rotatex(-90deg) translateZ(55px);
+    animation: zoom_cima 10s linear infinite;
+}
+.baixo{
+    transform: rotatex(90deg) translateZ(55px);
+    animation: zoom_baixo 10s linear infinite;
+    
+}
+#frente{
+    background-color: rgb(255, 255, 255);
+    transform: translateZ(55px);
+    animation: zoom_frente 10s linear infinite;
+}
+    
+.tras{
+    
+    transform: translateZ(-55px);
+    animation: zoom_tras 10s linear infinite;
+    
+}
+.esq2{height: 30px;
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    box-shadow:0 0 30px rgb(0, 97, 253) ;
+    transform: rotateY(90deg) translateZ(55px);
+    filter: blur(30px);
+    }
+.dir2{height: 30px;
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    box-shadow:0 0 30px rgb(0, 97, 253) ;
+    transform: rotateY(-90deg) translateZ(55px);
+    filter: blur(30px);
+}
+.cima2{height: 30px; 
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    box-shadow:0 0 30px rgb(0, 97, 253) ;
+    transform: rotatex(-90deg) translateZ(55px);
+    filter: blur(30px);
+}
+.baixo2{height: 30px;
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    box-shadow:0 0 30px rgb(0, 97, 253) ;
+    transform: rotatex(90deg) translateZ(55px);
+    filter: blur(30px);
+}
+.frente2{
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    transform: translateZ(55px);
+    filter: blur(30px);
+    
+}
+.tras2{
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253);
+    background: linear-gradient(45deg, #000000, #000000, blue, blue, #000000, #000000);
+    animation: pulsar 1s linear infinite;
+    box-shadow:0 0 30px rgb(0, 97, 253) ;
+    transform: translateZ(-55px);
+    filter: blur(30px);
+    
+}
+.esq3{height: 30px;
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    transform: rotateY(-90deg) translateZ(50px);
+    }
+.dir3{height: 30px;
+    height: 30px;
+    border: 2px solid rgba(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    transform: rotateY(-90deg) translateZ(-50px);
+}
+.cima3{
+    height: 30px;
+    border: 2px solid rgba(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    
+    transform: rotatex(-90deg) translateZ(50px);
+}
+.baixo3{
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    
+    transform: rotatex(90deg) translateZ(50px);
+}
+.frente3{
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    transform: translateZ(50px);
+}
+.tras3{
+    height: 30px;
+    border: 2px solid rgb(0, 97, 253, 0.309);
+    background-position: center;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8733c8f3-422d-415f-8186-ef615953bc37/d561aek-c1d4b869-a83d-4add-8cbf-85c9142e0227.jpg/v1/fill/w_600,h_542,q_75,strp/hi_res_tesseract__stock__by_sheridan_j_d561aek-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQyIiwicGF0aCI6IlwvZlwvODczM2M4ZjMtNDIyZC00MTVmLTgxODYtZWY2MTU5NTNiYzM3XC9kNTYxYWVrLWMxZDRiODY5LWE4M2QtNGFkZC04Y2JmLTg1YzkxNDJlMDIyNy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMfquMRee1ajLTDZq46zRv2b24GyUc1HAxim9ZFaEC0);
+    box-shadow:0 0 50px rgb(0, 97, 253) ;
+    background-size: 210%;
+    opacity: 0.01;
+    transform: translateZ(-50px);
+    
+}
+.tras:hover{
+  
+    filter: invert();
+}
+#frente:hover{
+   
+    filter: invert();
+}
+.cima:hover{
+    
+    filter: invert();
+}
+.baixo:hover{
+    
+    filter: invert();
+}
+.esq:hover{
+  
+    filter: invert();
+}
+.dir:hover{
+    
+    filter: invert();
+   
+}
+
+
+
